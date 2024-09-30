@@ -1,0 +1,32 @@
+**ALGORITHM**
+```
+START
+Procedure Hanoi(disk, source, dest, aux)
+
+   IF disk == 1, THEN
+      move disk from source to dest             
+   ELSE
+      Hanoi(disk - 1, source, aux, dest)     // Step 1
+      move disk from source to dest          // Step 2
+      Hanoi(disk - 1, aux, dest, source)     // Step 3
+   END IF
+   
+END Procedure
+STOP
+```
+
+**CODE**
+
+``` 
+void hanoi(int n, char BEG, char END, char AUX) {
+   if(n == 1){
+      printf("Move disk 1 from %c to %c\n", BEG, PEG);
+   }
+   else{
+      hanoi(n-1, BEG, AUX, PEG);
+      printf("Move disk %d from %c to %c\n", n, from, to);
+      hanoi(n-1, AUX, END, BEG);
+   }
+}
+
+```
